@@ -108,6 +108,7 @@
 import Player from '~/components/MusicPlayer.vue'
 
 export default {
+  middleware: 'auth',
   components: {
     Player
   },

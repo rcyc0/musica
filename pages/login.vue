@@ -1,27 +1,45 @@
 <template>
-  <v-layout>
-    <v-flex>
-      <v-card v-if="$auth.state.loggedIn">
-        <v-alert :value="error" type="error">{{ error }}</v-alert>
-        <v-card-text> Logged in as {{ $auth.state.user.email }} </v-card-text>
-        <v-card-actions>
-          <v-btn @click="logout">Log out</v-btn>
-        </v-card-actions>
-      </v-card>
-      <v-card v-else>
-        <v-alert :value="error" type="error">{{ error }}</v-alert>
-        <v-card-text>
-          <v-form>
-            <v-text-field v-model="email" label="Email" />
-            <v-text-field v-model="password" label="Password" type="password" />
-          </v-form>
+  <v-container fluid fill-height>
+    <v-layout align-center justify-center>
+      <v-flex xs12 sm8 md4>
+        <v-card class="elevation-12">
+          <v-toolbar color="primary" dark flat>
+            <v-toolbar-title>Login</v-toolbar-title>
+          </v-toolbar>
+          <v-card-text>
+            <v-form>
+              <v-text-field
+                v-model="email"
+                label="Login"
+                name="login"
+                prepend-icon="mdi-account"
+                type="text"
+              ></v-text-field>
+
+              <v-text-field
+                v-model="password"
+                id="password"
+                label="Password"
+                name="password"
+                prepend-icon="mdi-lock"
+                type="password"
+              ></v-text-field>
+            </v-form>
+          </v-card-text>
           <v-card-actions>
-            <v-btn @click="login">Log in</v-btn>
+            <v-spacer></v-spacer>
+            <v-btn @click="login" color="primary">Login</v-btn>
           </v-card-actions>
-        </v-card-text>
-      </v-card>
-    </v-flex>
-  </v-layout>
+        </v-card>
+      </v-flex>
+    </v-layout>
+    <v-snackbar v-model="error" color="error" top="true">
+      Error while authenticating
+      <v-btn @click="error = false" dark text>
+        Close
+      </v-btn>
+    </v-snackbar>
+  </v-container>
 </template>
 
 <script>
@@ -46,8 +64,7 @@ export default {
           }
         })
       } catch (e) {
-        // this.$toast.error('Error while authenticating')
-        this.error = e
+        this.error = true
       }
     }
   }
