@@ -17,8 +17,8 @@
               ></v-text-field>
 
               <v-text-field
-                v-model="password"
                 id="password"
+                v-model="password"
                 label="Password"
                 name="password"
                 prepend-icon="mdi-lock"

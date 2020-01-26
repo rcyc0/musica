@@ -50,7 +50,9 @@ export default {
     '@nuxtjs/pwa',
     // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv',
-    '@nuxtjs/auth'
+    '@nuxtjs/auth',
+    '@nuxtjs/proxy',
+    'cookie-universal-nuxt'
   ],
   /*
    ** Axios module configuration
@@ -95,6 +97,10 @@ export default {
         }
       }
     }
+  },
+
+  proxy: {
+    '/api/musics': 'http://localhost:3001/'
   },
   /*
    ** Build configuration
