@@ -33,7 +33,7 @@
                 :key="index"
                 :inset="item.inset"
               ></v-divider>
-              <v-list-item v-else :key="item.title" @click="">
+              <v-list-item v-else :key="item.title">
                 <v-list-item-content>
                   <v-list-item-title
                     v-text="item.index + '.' + item.title"

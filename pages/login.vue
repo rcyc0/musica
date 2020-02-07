@@ -28,14 +28,14 @@
           </v-card-text>
           <v-card-actions>
             <v-spacer></v-spacer>
-            <v-btn @click="login" color="primary">Login</v-btn>
+            <v-btn color="primary" @click="login">Login</v-btn>
           </v-card-actions>
         </v-card>
       </v-flex>
     </v-layout>
     <v-snackbar v-model="error" color="error" top="true">
       Error while authenticating
-      <v-btn @click="error = false" dark text>
+      <v-btn dark text @click="error = false">
         Close
       </v-btn>
     </v-snackbar>

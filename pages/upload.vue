@@ -3,7 +3,7 @@
     id="foo"
     ref="el"
     :options="options"
-    :destroyDropzone="true"
+    :destroy-dropzone="true"
   ></dropzone>
 </template>
 <script>

@@ -14,7 +14,6 @@
         <v-col>
           <v-row dense>
             <v-slider
-              @click.native="setPosition()"
               v-model="percentage"
               :disabled="!loaded"
               dark
@@ -23,6 +22,7 @@
               color="primary"
               class="ml-0"
               max="100000"
+              @click.native="setPosition()"
             ></v-slider>
           </v-row>
           <v-row justify="start">
@@ -38,26 +38,26 @@
             </v-col>
             <v-spacer />
             <v-col justify-self="center" align-self="center" cols="5">
-              <v-btn :color="repeatcolor" @click="repeat" icon>
+              <v-btn :color="repeatcolor" icon @click="repeat">
                 <v-icon v-if="loop">mdi-repeat-once</v-icon>
                 <v-icon v-else>mdi-repeat</v-icon>
               </v-btn>
-              <v-btn @click="previous" icon color="grey darken-4">
+              <v-btn icon color="grey darken-4" @click="previous">
                 <v-icon>mdi-skip-previous</v-icon>
               </v-btn>
               <v-btn
-                @click.native="playing ? pause() : play()"
                 :disabled="!loaded"
                 class="mx-2 ml-5 mr-5"
                 fab
                 dark
                 large
                 color="primary"
+                @click.native="playing ? pause() : play()"
               >
                 <v-icon v-if="!playing || paused" dark>mdi-play</v-icon>
                 <v-icon v-else dark>mdi-pause</v-icon>
               </v-btn>
-              <v-btn @click="next" icon color="grey darken-4">
+              <v-btn icon color="grey darken-4" @click="next">
                 <v-icon>mdi-skip-next</v-icon>
               </v-btn>
               <v-btn icon color="grey darken-4">
