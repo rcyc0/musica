@@ -1524,10 +1524,10 @@
     consola "^2.11.3"
     eslint-loader "^4.0.2"
 
-"@nuxtjs/proxy@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/proxy/-/proxy-2.0.0.tgz#cf19894eac721a2ad896293f241371f046db71e7"
-  integrity sha512-ewiOLAhfQlE/QWiQkHH0MQBYrtTRRSuz5SqDly1Zy/M3cN9bxqWd9d5Ty/GnU3nLtwsfW64TrRKuTw8/gT1nFQ==
+"@nuxtjs/proxy@^2.0.0", "@nuxtjs/proxy@^2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/proxy/-/proxy-2.0.1.tgz#2469b6e316311aa8c60d348502a54bfe6d5536aa"
+  integrity sha512-RVZ6iYeAuWteot9oer3vTDCOEiTwg37Mqf6yy8vPD0QQaw4z3ykgM++MzfUl85jM14+qNnODZj5EATRoCY009Q==
   dependencies:
     consola "^2.11.3"
     http-proxy-middleware "^1.0.4"
@@ -3105,17 +3105,7 @@ connect@^3.7.0:
     parseurl "~1.3.3"
     utils-merge "1.0.1"
 
-consola@^2.10.0, consola@^2.10.1, consola@^2.11.3, consola@^2.12.1, consola@^2.6.0, consola@^2.9.0:
-  version "2.12.1"
-  resolved "https://registry.yarnpkg.com/consola/-/consola-2.12.1.tgz#88e9311a02cb88a7f6f9488239dd30b6ba99cbb0"
-  integrity sha512-aEkkju9ZcEa9y2MhzNhfmTUws/CEZZ0LKu0FxftSU3HygPfVMMIMSYyYct+xBN6XNRhsaDZjw2HAv3m2ammXSA==
-
-consola@^2.13.0:
-  version "2.13.0"
-  resolved "https://registry.yarnpkg.com/consola/-/consola-2.13.0.tgz#5a4dc75e1b1fddbd8b10728e7790a2e54efeeeb7"
-  integrity sha512-Jw+8qpL0yrpfqH9m90fWoDRQyn8TYU6Aegpl4UofoP81VYvQLoOWMpFw2vQ3U/cyLRRzTc/CyNC6YYVzZFU8Eg==
-
-consola@^2.14.0:
+consola@^2.10.0, consola@^2.10.1, consola@^2.11.3, consola@^2.12.1, consola@^2.13.0, consola@^2.14.0, consola@^2.6.0, consola@^2.9.0:
   version "2.14.0"
   resolved "https://registry.yarnpkg.com/consola/-/consola-2.14.0.tgz#162ee903b6c9c4de25077d93f34ab902ebcb4dac"
   integrity sha512-A2j1x4u8d6SIVikhZROfpFJxQZie+cZOfQMyI/tu2+hWXe8iAv7R6FW6s6x04/7zBCst94lPddztot/d6GJiuQ==
